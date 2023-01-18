@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "mcdrssc",
+  "version": "${version}",
+
+  "name": "MCDR Server Sided Completion",
+  "description": "A fabric mod that allows you to complete MCDR commands without any client modifications.",
+  "authors": [
+    "ishland"
+  ],
+  "contact": {
+  },
+
+  "license": "MIT",
+  "icon": "assets/mcdrssc/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.ishland.mcdrssc.TheMod"
+    ]
+  },
+  "mixins": [
+    "mcdrssc.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "java": ">=17"
+  }
+}
