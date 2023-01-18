@@ -81,10 +81,12 @@ public class CommandTreeReader {
                 continue;
             }
 
-            commands.add(name);
-            if (children != null && !children.isEmpty()) {
-                String finalName = name;
-                commands.addAll(children.stream().map(s -> finalName + " " + s).toList());
+            if (type.equals("LITERAL")) {
+                commands.add(name);
+                if (children != null && !children.isEmpty()) {
+                    String finalName = name;
+                    commands.addAll(children.stream().map(s -> finalName + " " + s).toList());
+                }
             }
 
             reader.endObject();
